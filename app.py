@@ -43,5 +43,14 @@ def portfolio():
     }
     return jsonify(data)
 
+@app.route('/contact')
+def contact():
+    data={
+        "email":"priya@gmail.com",
+        "location": "london",
+        "available": True
+    }
+    return jsonify(data)
+
 if __name__== '__main__':
     app.run(debug=True)

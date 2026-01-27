@@ -52,5 +52,39 @@ def contact():
     }
     return jsonify(data)
 
+@app.route('/projects')
+def projects():
+    data={
+        "total":1,
+        "projects":[
+           {
+               "name": "Personal API",
+               "tech": ["flask","python"],
+               "status":"In progress"
+           },
+           {
+               "name": "trial",
+               "tech":["html","css","javascript"],
+               "status": "not started"
+           }
+        ]
+    }
+    return jsonify(data)
+
+@app.route('/all')
+def all():
+    data={
+        "personal":{
+            "name":"priya darshini ",
+            "loc":"london",
+            "email":"priya@gmail.com"
+        },
+        "skills":["python","flask","html","css"],
+        "projects":1,
+        "github": "priya29o08",
+        "available":True
+    }
+    return jsonify(data)
+
 if __name__== '__main__':
     app.run(debug=True)
